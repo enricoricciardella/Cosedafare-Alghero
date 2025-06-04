@@ -1,0 +1,226 @@
+@import "/node_modules/slick-carousel/slick/slick.css";
+@import "/node_modules/slick-carousel/slick/slick-theme.css";
+
+:root {
+  --col-primary: #002B5B;
+  --col-secondary: #0056B3;
+  --col-accent: #003f7f;
+  --text-dark: #333333;
+  --text-light: #555555;
+  --bg-card: #FFFFFF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap');
+body {
+  font-family: 'Inter', sans-serif;
+}
+h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+p, a {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Migliora le frecce */
+.slick-prev:before,
+.slick-next:before {
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 5px black;
+}
+
+.grid-ristoranti {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* 3 colonne da 300px */
+  justify-content: center;                 /* centra il blocco nel container */
+  gap: 3rem;                                /* spazio tra le card aumentato */
+  margin-top: 1rem;
+}
+
+/* Quando lo schermo si restringe sotto i 960px: 2 colonne da 300px */
+@media (max-width: 960px) {
+  .grid-ristoranti {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+/* Quando lo schermo si restringe sotto i 640px: 1 colonna da 300px */
+@media (max-width: 640px) {
+  .grid-ristoranti {
+    grid-template-columns: 300px;
+  }
+}
+
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Griglia lounge bar: 3 per riga, poi 3, poi rimanenti */
+.grid-lounge {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1090px) {
+  .grid-lounge {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 740px) {
+  .grid-lounge {
+    grid-template-columns: 300px;
+  }
+}
+
+/* Griglia discoteche: fino a 3 per riga */
+.grid-discoteche {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1090px) {
+  .grid-discoteche {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 740px) {
+  .grid-discoteche {
+    grid-template-columns: 300px;
+  }
+}
+
+/* =========================================
+   STILI PER LA HOME
+   ========================================= */
+
+/* Contenitore principale della Home */
+.home-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Titolo principale */
+.home-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--col-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Sottotitolo introduttivo */
+.home-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+/* Contenitore per l'immagine */
+.home-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Immagine della Hero (non full-width) */
+.home-hero-img {
+  max-width: 800px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Sezione introduttiva sotto l'immagine */
+.home-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Paragrafo descrittivo */
+.home-intro p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* =========================================
+   STILI PER I PULSANTI NELLA HOME
+   ========================================= */
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem; /* un po' di spazio sopra i bottoni */
+}
+
+.btn-home {
+  background-color: var(--col-secondary, #0056B3); /* blu medio */
+  color: #ffffff;                                    /* testo bianco */
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-home:hover {
+  background-color: var(--col-accent, #003f7f); /* blu più scuro in hover */
+}
+
+/* Responsive: su schermi piccoli metti i pulsanti in colonna */
+@media (max-width: 640px) {
+  .home-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
