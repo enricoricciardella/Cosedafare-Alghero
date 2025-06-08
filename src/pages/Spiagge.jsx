@@ -56,7 +56,7 @@ export default function Spiagge() {
       descrizione:
         "Una delle spiagge più famose di Alghero, acqua cristallina e sabbia dorata.",
       immagine:
-        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrp8OrzgwMEevQaXKBWA5REaL956yy6eUiF0EbkHmG_CfMcM4iTCaU0AZuykk198v5JDoqLhUlRewpCNJIAb0BssngsaKqQMH-VY5vLPY-faC-gus8v7ArdL2eVI63N4ZN12kWSvw=s1360-w1360-h1020-rw",
+        "../public/bombarde.webp",
       link: "https://maps.app.goo.gl/9tAggDrP2Wm2U5x46",
     },
     {
@@ -64,7 +64,7 @@ export default function Spiagge() {
       posizione: [40.58254939057573, 8.247112770460463],
       descrizione: "Spiaggia incantevole con piccole calette e acqua turchese.",
       immagine:
-        "https://img7.juzaphoto.com/001/shared_files/uploads/4554422.jpg",
+        "../public/Lazzaretto.jpg",
       link: "https://maps.app.goo.gl/Crez8asWj81PuWSs6",
     },
     {
@@ -73,7 +73,7 @@ export default function Spiagge() {
       descrizione:
         "Spiaggia tranquilla immersa nella pineta, ideale per le famiglie.",
       immagine:
-        "https://www.fotosardegna.it/wp-content/uploads/2020/01/spiaggia-di-mugoni-scaled.jpg",
+        "../public/mugoni.jpg",
       link: "https://maps.app.goo.gl/TvM38NVSpkrX5Afu7",
     },
     {
@@ -82,7 +82,7 @@ export default function Spiagge() {
       descrizione:
         "Spiaggia sulla strada per Bosa, con onde più mosse e paesaggio selvaggio.",
       immagine:
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/b0/d4/d9/poglina-beach.jpg?w=1200&h=-1&s=1",
+        "../public/speranza.jpg",
       link: "https://maps.app.goo.gl/GYwJqXMoDq9LRpvj9",
     },
     {
@@ -91,7 +91,7 @@ export default function Spiagge() {
       descrizione:
         "Una delle spiagge più belle d'Italia, con sabbia bianca e acqua cristallina a un'ora da Alghero.",
       immagine:
-        "https://spiaggialapelosa.it/wp-content/uploads/2023/05/Stintino_AdobeStock_41621653-scaled.jpeg",
+        "../public/Stintino.jpeg",
       link: "https://spiaggialapelosa.it/",
     },
   ];

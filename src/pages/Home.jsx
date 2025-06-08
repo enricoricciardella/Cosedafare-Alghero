@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="home-page">
       {/* Titolo principale */}
-      <h2 className="home-title">Benvenuto in Guida Alghero!</h2>
+      <h2 className="home-title">Benvenuto nella mia guida per Alghero!</h2>
       {/* Sottotitolo introduttivo */}
       <p className="home-subtitle">
         Scopri i migliori ristoranti, le spiagge da sogno e la vita notturna di
