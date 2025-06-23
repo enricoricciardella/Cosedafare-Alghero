@@ -71,7 +71,7 @@ export default function Ristoranti() {
       descrizione:
         "Ristorante/pizzeria/piatti composti/panini/bruschette. Praticamente puoi mangiare qualsiasi cosa! Ottimo se arrivi dall'aeroporto o al ritorno dal mare vuoi fare un boccone al volo a Fertilia o vuoi fare un aperitivo.",
       immagine:
-        "../public/miramare.webp",
+        "../public/milese.webp",
       link: "https://www.cohibafertilia.it/",
       contatto: "079 932004",
     },
@@ -79,7 +79,7 @@ export default function Ristoranti() {
 
   return (
     <div>
-      <h2 style={{ marginTop: "3rem", textAlign: "center" }}>
+      <h2 style={{ marginTop: "5rem", textAlign: "center", fontSize:"2.2rem" }}>
         Ristoranti strettamente consigliati! 🦞🐟
       </h2>
       <p style={{ padding: "2rem", textAlign: "center" }}>

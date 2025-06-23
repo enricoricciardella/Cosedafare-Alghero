@@ -135,7 +135,8 @@ export default function Spiagge() {
         style={{
           textAlign: "center",
           marginBottom: "2rem",
-          fontSize: "2rem",
+          marginTop:"3rem",
+          fontSize: "2.2rem",
           color: "#000",
           fontWeight: "600",
         }}

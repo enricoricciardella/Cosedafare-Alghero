@@ -1,5 +1,8 @@
 import React from "react";
 import RistoranteCard from "../components/RistoranteCard";
+import "../index.css";
+
+
 
 const localiNotturni = [
   {
@@ -83,8 +86,21 @@ export default function VitaNotturna() {
   const discoteche = localiNotturni.filter((l) => l.tipo === "Discoteca");
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "'Inter', sans-serif" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "1.5rem", color: "#002B5B", padding: "1.6rem" }}>
+    <div className="nightlife-page" style={{ padding: "2rem", fontFamily: "'Inter', sans-serif", backgroundColor: "#040c36", position: "relative", overflow: "hidden", minHeight: "100vh" }}>
+      <div className="stars">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div
+            key={i}
+            className="star"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 10}s`,
+            }}
+          />
+        ))}
+      </div>
+      <h2 style={{ textAlign: "center", marginBottom: "2rem", marginTop:"2rem", color: "#002B5B", padding: "1.6rem", color: "white",fontSize: "2rem" }}>
         Vita Notturna ad Alghero
       </h2>
 
@@ -117,7 +133,7 @@ export default function VitaNotturna() {
           />
         ))}
       </div>
-      <p style={{marginTop: "3rem", textAlign: "center"}}> <em>( Naturalmente anche nei lounge bar è possibile ballare, generalmente a partire da una certa ora fino a chiusura. Ad esempio, al Bahia la musica si interrompe intorno alle 03:00, mentre al Riservato termina verso l’01:30/02:00. )</em></p>
+      <p style={{marginTop: "3rem", textAlign: "center", color: "white"}}> <em>( Naturalmente anche nei lounge bar è possibile ballare, generalmente a partire da una certa ora fino a chiusura. Ad esempio, al Bahia la musica si interrompe intorno alle 03:00, mentre al Riservato termina verso l’01:30/02:00. )</em></p>
     </div>
   );
 }

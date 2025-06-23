@@ -1,32 +1,39 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "1rem",
-        backgroundColor: "#0088cc",
-        color: "white",
-      }}>
-      <h1>
-        <Link to="/" style={{ color: "white", textDecoration: "none" }}>Che fare ad Alghero?</Link>
-      </h1>
-      <h5 style={{ color: "white", textDecoration: "none" }}>Luelen & Al 205</h5>
-      <div style={{ display: "flex", gap: "1rem" }}>
-        <Link
-          to="/ristoranti"
-          style={{ color: "white", textDecoration: "none" }}> Ristoranti</Link>
-        <Link to="/spiagge" style={{ color: "white", textDecoration: "none" }}>Spiagge</Link>
-          <Link to="/vita-notturna" style={{ color: "white", textDecoration: "none" }}>
-          Vita Notturna
-        </Link>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <button>ITA</button>
-        <button>EN</button>
-        <button>ES</button>
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        {/* Brand */}
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-logo">Home</Link>
+          <span className="navbar-subtitle">Luelen &amp; Al 205</span>
+        </div>
+        {/* Hamburger menu */}
+        <button
+          className="navbar-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+        >
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
+        </button>
+        {/* Menu links */}
+        <div className={`navbar-menu${menuOpen ? " active" : ""}`}>
+          <Link to="/ristoranti" className="nav-link">Ristoranti</Link>
+          <Link to="/spiagge" className="nav-link">Spiagge</Link>
+          <Link to="/vita-notturna" className="nav-link">Vita Notturna</Link>
+          <Link to="/vicino-casa" className="nav-link">Vicino a Casa</Link>
+          <div className="navbar-lang">
+            <button className="lang-btn">ITA</button>
+            <button className="lang-btn">EN</button>
+            <button className="lang-btn">ES</button>
+          </div>
+        </div>
       </div>
     </nav>
   );
